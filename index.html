@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <h2>Settings</h2>
+            <div class="settings">
+                <label>
+                    Work Duration (minutes)
+                    <input type="number" id="workTime" value="25" min="1" max="60">
+                </label>
+                <label>
+                    Break Duration (minutes)
+                    <input type="number" id="breakTime" value="5" min="1" max="30">
+                </label>
+                <button id="saveSettings">Save Settings</button>
+            </div>
+            <div class="task-list">
+                <h3>Tasks</h3>
+                <input type="text" id="taskInput" placeholder="Add a new task...">
+                <button id="addTask">Add Task</button>
+                <ul id="tasks"></ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1>Pomodoro Timer</h1>
+            <div class="timer-container">
+                <div class="timer">
+                    <span id="minutes">25</span>:<span id="seconds">00</span>
+                </div>
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <div class="mode">
+                    <span id="mode-text">Work Time</span>
+                </div>
+                <div class="controls">
+                    <button id="start">Start</button>
+                    <button id="pause">Pause</button>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <div class="crypto-tracker">
+                <h3>Bitcoin Price</h3>
+                <div class="crypto-price">
+                    <img src="https://assets.coingecko.com/coins/images/1/small/bitcoin.png" alt="BTC">
+                    <div class="price-details">
+                        <span id="btc-price">Loading...</span>
+                        <span id="btc-change" class="price-change">0.00%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="spotify-player">
+                <h3>Focus Music</h3>
+                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZeKCadgRdKQ" 
+                        width="100%" 
+                        height="380" 
+                        frameborder="0" 
+                        allowtransparency="true" 
+                        allow="encrypted-media">
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
