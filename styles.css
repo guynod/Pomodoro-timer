@@ -43,8 +43,11 @@ body {
 .timer {
     font-size: 6rem;
     font-weight: 700;
-    color: #2d3436;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #0984e3, #00b0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
     margin: 1rem 0;
 }
 
